@@ -44,7 +44,6 @@ body {
     background-color: white;
     padding: 10px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-    z-index: 2;
     margin-top: 20px;
     box-sizing: border-box;
 }
@@ -84,12 +83,8 @@ button:hover {
     background-color: #9ec5a0;
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
     .container {
-        flex-direction: row;
-    }
-
-    .canvas-wrapper {
         flex-direction: row;
     }
 
@@ -102,15 +97,8 @@ button:hover {
         margin-top: 0;
     }
 
-    #prevBackgroundBtn, #nextBackgroundBtn {
-        font-size: 30px;
-    }
-
-    #prevBackgroundBtn {
-        margin-right: 10px;
-    }
-
-    #nextBackgroundBtn {
-        margin-left: 10px;
+    #canvas {
+        max-width: none;
+        height: 100%;
     }
 }
