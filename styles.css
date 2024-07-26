@@ -5,45 +5,55 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     background-color: #f0f0f0;
 }
 
 .container {
     display: flex;
+    flex-direction: column;
     align-items: center;
     background-color: white;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .canvas-wrapper {
     position: relative;
     display: flex;
+    flex-direction: column;
     align-items: center;
+    width: 100%;
 }
 
 #canvas {
     border: 1px solid #ccc;
+    max-width: 100%;
+    height: auto;
 }
 
 .controls {
-    position: absolute;
-    width: 270px;
-    height: 320px;
-    top: 90px; 
-    right: 180px; 
+    position: static;
+    width: 100%;
+    max-width: 270px;
+    height: auto;
     display: flex;
     flex-direction: column;
     background-color: white;
     padding: 10px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-    z-index: 2; 
+    z-index: 2;
+    margin-top: 20px;
+    box-sizing: border-box;
 }
 
 input, select, button {
     margin-bottom: 10px;
     padding: 5px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .controls button {
@@ -58,25 +68,49 @@ button:hover {
 }
 
 #prevBackgroundBtn, #nextBackgroundBtn {
-    font-size: 30px;
+    font-size: 24px;
     position: relative;
     border-radius: 50%;
     padding: 8px 16px;
     z-index: 10;
     background-color: #04AA6D;
-    color: white; 
+    color: white;
     border: none;
     cursor: pointer;
+    margin: 10px 5px;
 }
 
 #prevBackgroundBtn:hover, #nextBackgroundBtn:hover {
     background-color: #9ec5a0;
 }
 
-#prevBackgroundBtn {
-    margin-right: 10px;
-}
+@media screen and (min-width: 768px) {
+    .container {
+        flex-direction: row;
+    }
 
-#nextBackgroundBtn {
-    margin-left: 10px;
+    .canvas-wrapper {
+        flex-direction: row;
+    }
+
+    .controls {
+        position: absolute;
+        width: 270px;
+        height: 320px;
+        top: 90px;
+        right: 180px;
+        margin-top: 0;
+    }
+
+    #prevBackgroundBtn, #nextBackgroundBtn {
+        font-size: 30px;
+    }
+
+    #prevBackgroundBtn {
+        margin-right: 10px;
+    }
+
+    #nextBackgroundBtn {
+        margin-left: 10px;
+    }
 }
