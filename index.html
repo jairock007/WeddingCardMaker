@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Card Maker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <button id="prevBackgroundBtn">&#8249;</button>
+        <div class="canvas-wrapper">
+            <canvas id="canvas" width="400" height="700"></canvas>
+        </div>
+        <button id="nextBackgroundBtn">&#8250;</button>
+        <div class="controls">
+            <input type="text" id="textInput" placeholder="Enter text">
+            <button id="addTextBtn">Add Text</button>
+            <select id="fontSelect">
+                <option value="Arial">Arial</option>
+                <option value="Verdana">Verdana</option>
+                <option value="Times New Roman">Times New Roman</option>
+                <option value="Courier New">Courier New</option>
+                <option value="Georgia">Georgia</option>
+                <option value="Tahoma">Tahoma</option>
+                <option value="Trebuchet MS">Trebuchet MS</option>
+                <option value="Impact">Impact</option>
+                <option value="Comic Sans MS">Comic Sans MS</option>
+                <option value="Lucida Console">Lucida Console</option>
+                <option value="Lucida Sans Unicode">Lucida Sans Unicode</option>
+                <option value="Palatino Linotype">Palatino Linotype</option>
+            </select>
+            <input type="color" id="colorPicker" value="#000000">
+            <input type="number" id="sizeInput" min="10" max="100" value="20">
+            <button id="undoBtn">Undo</button>
+            <button id="redoBtn">Redo</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.canvas-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+#canvas {
+    border: 1px solid #ccc;
+}
+
+.controls {
+    position: absolute;
+    width: 270px;
+    height: 320px;
+    top: 90px; 
+    right: 180px; 
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    z-index: 2; 
+}
+
+input, select, button {
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+.controls button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#prevBackgroundBtn, #nextBackgroundBtn {
+    font-size: 30px;
+    position: relative;
+    border-radius: 50%;
+    padding: 8px 16px;
+    z-index: 10;
+    background-color: #04AA6D;
+    color: white; 
+    border: none;
+    cursor: pointer;
+}
+
+#prevBackgroundBtn:hover, #nextBackgroundBtn:hover {
+    background-color: #9ec5a0;
+}
+
+#prevBackgroundBtn {
+    margin-right: 10px;
+}
+
+#nextBackgroundBtn {
+    margin-left: 10px;
+}
