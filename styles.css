@@ -71,7 +71,7 @@ button:hover {
     position: relative;
     border-radius: 50%;
     padding: 8px 16px;
-    z-index: 10;
+    z-index: 0;
     background-color: #04AA6D;
     color: white;
     border: none;
@@ -82,6 +82,44 @@ button:hover {
 #prevBackgroundBtn:hover, #nextBackgroundBtn:hover {
     background-color: #9ec5a0;
 }
+.modal {
+    display: none;
+    /* position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4); */
+  }
+  
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+  }
+  
+  #pageList {
+    margin-bottom: 20px;
+  }
+  
+  .page-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+  }
+  
+  .page-item button {
+    margin: 0 5px;
+  }
 
 @media (min-width: 768px) {
     .container {
@@ -92,13 +130,42 @@ button:hover {
         position: absolute;
         width: 270px;
         height: 320px;
-        top: 90px;
-        right: 180px;
+        top: 180px;
+        right: 70px;
         margin-top: 0;
     }
-
+    
     #canvas {
         max-width: none;
         height: 100%;
     }
+}
+
+.page-preview {
+    width: 100px;
+    height: 175px;
+    justify-content: space-between;
+    align-items: center;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.page-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+}
+
+.page-controls {
+    display: flex;
+    flex-direction: column;
+}
+
+.page-controls button {
+    margin: 2px;
+    padding: 5px 10px;
 }
