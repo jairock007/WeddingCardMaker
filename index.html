@@ -7,6 +7,14 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div id="customizeModal" class="modal">
+        <div class="modal-content">
+          <h2>Customize Pages</h2>
+          <div id="pageList"></div>
+          <button id="saveOrderBtn">Save Order</button>
+          <button id="closeModalBtn">Close</button>
+        </div>
+      </div>
     <div class="container">
         <button id="prevBackgroundBtn">&#8249;</button>
         <div class="canvas-wrapper">
@@ -31,9 +39,10 @@
                 <option value="Palatino Linotype">Palatino Linotype</option>
             </select>
             <input type="color" id="colorPicker" value="#000000">
-            <input type="number" id="sizeInput" min="10" max="100" value="20">
+            <input type="number" id="sizeInput" min="10" max="100" value="60">
             <button id="undoBtn">Undo</button>
             <button id="redoBtn">Redo</button>
+            <button id="customizePagesBtn">Customize Pages</button>
         </div>
     </div>
     <script src="script.js"></script>
